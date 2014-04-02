@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Locomas</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="url_retailersignup"> Retailer <a href='http://www.google.com'>Signup page</a></string>
+
+    <string name="name_retailer"> Locomas</string>
+</resources>

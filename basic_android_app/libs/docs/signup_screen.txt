@@ -1,0 +1,10 @@
+
+
+--------------------
+Locomas.com         'Back'  |  <---- Can this 'Back' button be integrated with the devices 'back' button?
+----
+
+Retailer              <---- Link to 'retailer_signup'
+
+----------
+

@@ -1,0 +1,26 @@
+'Locomas panel' contains a 'Back' button. This should navigate back to the 'initial_screen'
+
+Inside is another panel with 3 buttons to other screens
+
+'Login'
+
+'Signup'
+
+'About'
+
+e.g.
+
+
+--------------------
+Locomas.com         'Back'  |  <---- Can this 'Back' button be integrated with the devices 'back' button?
+----
+
+Login                                   <----  Link to 'login_screen'
+
+
+Signup                                   <----  Link to 'signup_screen'
+
+
+About                                   <----  Link to 'about_screen'
+
+----------

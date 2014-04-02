@@ -1,0 +1,82 @@
+There are several screens here.
+
+It is a process flow of
+
+1 Introduction / Description
+2 Basic authentication details
+3 Company information 1
+4 Company information 2
+5 Find Location
+6 Accept terms and conditions
+7a Confirm completion of details sent
+7b An error screen (due to some problem on the server)
+
+All the screens should have the 'Locomas' panel at the top with a 'Back' button and an 'Exit' button.
+
+The 'Exit' button should go back to the 'initial_screen' (i.e. webpage)
+
+Screens 1-5 should have a 'Next' button. On presentation of each screen, this should be disabled if validation is required.
+
+Screen 1 has no validation (there are no fields).
+The other screens have fields with a type. If not specified, the type is a 'unicode string' with maximum 40 characters.
+
+Screen 5 has a checkbox
+The other screens have fields with a type. If not specified, the type is a 'unicode string' with maximum 40 characters.
+
+Present the fields as ordered here in the 'details' panel.
+
+For some of the fields it may seem strange to not predefine some answers. Please dont worry about this right now. They can be polished later
+
+----
+
+1 Introduction / Description
+
+This is just a text panel which describes the process
+
+2 Basic authentication details
+
+Email address  ( valid email address )
+Password 1       ( max 20 characters )
+Password 2       ( max 20 characters, same as password 2 )
+
+3 Company information 1
+
+Name of business
+Name of business owner
+Type of business           
+Contact Phonenumber   ( only numerical characters or + )
+
+4 Company information 2
+
+Building Number
+Street Name 1
+Area
+District
+City
+Province
+Country               
+
+5 Find Location 
+
+There are two options here:
+
+There is the Google Play API, however it doesn't seem like the best idea to me, because it is limited to certain devices (although I suspect many would support it)
+And it's also an Android only solution.
+
+The other is a standard webview that loads a web page. I prefer this as it's cross platform. We try this method first:
+
+A Webview with a configurable URL / Javascript. Let me play with this so see if I can get it to work
+
+There should also be a button Use my current location'
+
+This should place an indicator on the Map. For now, just make an 'application manifest variable' (so I can change it easily) and we will use it as a 'valid signup variable'
+
+6 Accept terms and conditions
+
+Text
+I accept the terms and conditions with a check box. 
+
+The button at the bottom here should say 'Apply'
+
+
+You should take all the associated data, and convert it all into a json object.

@@ -1,0 +1,26 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.locomas.android.InitialActivity"
+    tools:ignore="MergeRootFrame">
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <com.locomas.android.controls.TopBar
+				android:id="@+id/topbar"
+				android:layout_width="fill_parent"
+				android:background="#DDD"
+				android:layout_height="wrap_content"
+				topbar:showBack = "false"
+				topbar:showMore="true"/>
+    <WebView android:id="@+id/main_web"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+    </LinearLayout>
+    
+    
+</FrameLayout>
+

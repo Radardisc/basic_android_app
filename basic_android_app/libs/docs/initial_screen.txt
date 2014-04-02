@@ -1,0 +1,20 @@
+A Panel at the top of the screen shows the name of the application in a small font. 
+Height roughly 5% of screen, but big enough to contain a 'More' button (this might be an icon in the future)
+
+A Webview should fill the rest of the screen
+
+The WebView should be able to have a configurable initial url, no navigation bar.
+
+e.g.
+
+-----
+Locomas                     More    |  <---- From now on, call this I will call this the  'localmas panel'
+-----
+
+
+
+WebView
+
+
+
+----------
