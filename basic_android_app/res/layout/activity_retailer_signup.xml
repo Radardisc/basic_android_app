@@ -1,0 +1,252 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.locomas.android.MoreActivity"
+    tools:ignore="MergeRootFrame">
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <com.locomas.android.controls.TopBar
+			android:id="@+id/topbar"
+			android:layout_width="fill_parent"
+			android:background="#DDD"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			topbar:showBack = "true"
+			topbar:showMore="true"/>
+        <LinearLayout android:id="@+id/buttombar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="#BBB"
+            android:layout_gravity="right"
+            android:layout_alignParentBottom="true">
+            <RelativeLayout android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+	            <Button android:id="@+id/btn_navigatePrev"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentLeft="true"
+	                android:text="Previous"/>
+	            <Button android:id="@+id/btn_navigateNext"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:text="Next"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_above="@id/buttombar"
+            android:layout_below="@id/topbar">
+            <ViewFlipper android:id="@+id/flipper"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout android:id="@+id/lyt_signup1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Here goes introduction info"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/lyt_signup2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <LinearLayout android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TableLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Email address"/>
+                                <EditText android:id="@+id/edt_email"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Password"/>
+                                <EditText android:id="@+id/edt_pass"
+									android:inputType="textPassword"
+        							android:password="true"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Confirm Password"/>
+                                <EditText android:id="@+id/edt_passConfirm"
+									android:inputType="textPassword"
+        							android:password="true"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/lyt_signup3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                        <TableLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name of business"/>
+                                <EditText android:id="@+id/edt_business"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Name of business owner"/>
+                                <EditText android:id="@+id/edt_businessOwner"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Type of business "/>
+                                <EditText android:id="@+id/edt_businesstype"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Contact Phonenumber"/>
+                                <EditText android:id="@+id/edt_contact"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            </TableLayout>
+                    
+                </LinearLayout>
+                <LinearLayout android:id="@+id/lyt_signup4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                        <TableLayout android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Building Number"/>
+                                <EditText android:id="@+id/edt_building"
+                                    android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Street Name 1"/>
+                                <EditText android:id="@+id/edt_street"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Area"/>
+                                <EditText android:id="@+id/edt_area"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="District"/>
+                                <EditText android:id="@+id/edt_district"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="City"/>
+                                <EditText android:id="@+id/edt_city"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Province"/>
+                                <EditText android:id="@+id/edt_province"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Country"/>
+                                <EditText android:id="@+id/edt_country"
+	                                android:layout_width="150dp"
+                                    android:layout_height="wrap_content"/>    
+                            </TableRow>
+                            
+                        </TableLayout>
+                    
+                </LinearLayout>
+                <LinearLayout android:id="@+id/lyt_signup5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                     <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="Find Location"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/lyt_signup5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                     <TextView android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:text="Here goes license"
+                         android:padding="10dp"/>
+                     <LinearLayout android:layout_width="fill_parent"
+                         android:layout_height="wrap_content">
+                            <CheckBox android:id="@+id/chb_license"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false"/>
+	                     <TextView android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:gravity="center"
+	                        android:layout_gravity="center"
+	                        android:text="I accept the terms and conditions. "/>
+                         
+                     </LinearLayout>
+                </LinearLayout>
+                
+                
+                
+            </ViewFlipper>
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+</FrameLayout>
+

@@ -43,7 +43,7 @@ public class MoreActivity extends ActionBarActivity implements OnClickListener {
 				Toast.makeText(this, "Coming Soon...", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.btn_signup:
-				startActivity(new Intent(this, SignUpActivity.class));
+				startActivityForResult(new Intent(this, SignUpActivity.class), 1);
 				break;
 			case R.id.buttonBack:
 				finish();
@@ -52,4 +52,14 @@ public class MoreActivity extends ActionBarActivity implements OnClickListener {
 		
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    if (requestCode == 1) {
+	        // Make sure the request was successful
+	        if (resultCode == 101) {
+	        	setResult(101);
+	        	finish();
+	        }
+	    }
+	}
 }

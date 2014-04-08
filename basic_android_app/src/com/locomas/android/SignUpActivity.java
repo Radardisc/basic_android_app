@@ -1,22 +1,11 @@
 package com.locomas.android;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.text.method.LinkMovementMethod;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.os.Build;
 
 public class SignUpActivity extends ActionBarActivity implements OnClickListener {
 
@@ -31,7 +20,13 @@ public class SignUpActivity extends ActionBarActivity implements OnClickListener
     private void initView() {
     	findViewById(R.id.buttonBack).setOnClickListener(this);
     	TextView link = (TextView) findViewById(R.id.link_signup);
-    	link.setMovementMethod(LinkMovementMethod.getInstance());
+    	link.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivityForResult(new Intent(SignUpActivity.this, RetailerSignUpActivity.class), 1);
+				
+			}
+		});;
     }
 
 	@Override
@@ -44,4 +39,14 @@ public class SignUpActivity extends ActionBarActivity implements OnClickListener
 		
 	}
 
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    if (requestCode == 1) {
+	        // Make sure the request was successful
+	        if (resultCode == 101) {
+	        	setResult(101);
+	        	finish();
+	        }
+	    }
+	}
 }

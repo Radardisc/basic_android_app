@@ -46,7 +46,7 @@ public class InitialActivity extends ActionBarActivity implements OnClickListene
 	public void onClick(View v) {
 		switch(v.getId()) {
 		case R.id.buttonMore:
-			startActivity(new Intent(this, MoreActivity.class));
+			startActivityForResult(new Intent(this, MoreActivity.class), 1);
 			break;
 		}
 		
