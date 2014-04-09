@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:topbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.locomas.android.InitialActivity"
+    tools:ignore="MergeRootFrame">
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+	    <LinearLayout android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:orientation="vertical">
+	        <EditText android:id="@+id/edt_field1"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="TexField 1"
+	            android:layout_margin="10dp"/>
+	        <EditText android:id="@+id/edt_field2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:hint="TexField 2"
+	            android:layout_margin="10dp"/>
+	        
+	        <TextView
+		        android:id="@+id/lblDate1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Date Picker 1"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+	        <DatePicker
+		        android:id="@+id/dp_start"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+	
+	        <TextView
+		        android:id="@+id/lblDate2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Date Picker 2"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+	        <DatePicker
+		        android:id="@+id/dp_end"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+	    
+	        <LinearLayout android:layout_width="fill_parent"
+	   			android:layout_height="wrap_content">
+	            <CheckBox android:id="@+id/chb_field1"
+	            	android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:checked="false"/>
+		        <TextView android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:text="checkbox Number 1"/>
+		    </LinearLayout>
+	        <LinearLayout android:layout_width="fill_parent"
+	   			android:layout_height="wrap_content">
+	            <CheckBox android:id="@+id/chb_field2"
+	            	android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:checked="false"/>
+		        <TextView android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		            android:gravity="center"
+		            android:layout_gravity="center"
+		            android:text="checkbox Number 2"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	</ScrollView>
+</FrameLayout>
+
